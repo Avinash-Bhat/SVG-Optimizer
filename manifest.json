@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "SVG Optimizer",
+  "short_name": "SVG Optimizer",
+  "description": "Optimizes your SVG files",
+  "version": "0.0.1",
+  "minimum_chrome_version": "38",
+
+  "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}

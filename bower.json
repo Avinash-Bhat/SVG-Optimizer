@@ -1,0 +1,11 @@
+{
+  "name": "SvgOptimizer",
+  "description": "Optimizes your SVG files",
+  "homepage": "",
+  "keywords": [
+  ],
+  "author": "Avinash Ananth Narayan R<nashpapa@gmail.com>",
+  "private": false,
+  "dependencies": {
+  }
+}
