@@ -3,8 +3,81 @@
 <html>
 <head>
   <title>SVG Optimizer</title>
+
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <script src="optimizer.js"></script>
+  <script src="main.js"></script>
+
+  <link rel="import" href="bower_components/core-icons/core-icons.html">
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="bower_components/core-label/core-label.html">
+  <link rel="import" href="bower_components/font-roboto/roboto.html">
+  <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+  <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+  <link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+  <link rel="import" href="svg-view.html">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body unresolved>
+  <template id="file-input" is="auto-binding">
+    <core-toolbar>
+      <span flex>Svg Optimizer</span>
+        <paper-fab
+          icon="add"
+          id="select-or-save"
+          on-click="{{openFileSelector}}"
+          aria-label="Select an SVG" />
+    </core-toolbar>
+
+    <section horizontal layout>
+      <div>
+        <svg-view svg="{{svg.html}}"></svg-view>
+        <center><div default-hidden show?="{{svg.html}}">Original ({{svg.size}})</div></center>
+        <svg-view svg="{{svg.optimized.html}}"></svg-view>
+        <center><div default-hidden show?="{{svg.optimized.html}}">Optimized ({{svg.optimized.size}})</div></center>
+      </div>
+      <div flex class="controls" default-hidden show?="{{svg.html}}">
+        <h2>Optimization Controls</h2>
+        <div>
+            <paper-checkbox
+              name="remove-whitespace"
+              label="Remove Whitespace"
+              checked="{{svg.options.whitespace}}"
+              on-change="{{startOptimizing}}" />
+        </div>
+      </div>
+    </section>
+  </template>
+<!-- 
+  <section>
+    <paper-tabs selected="0">
+      <paper-tab>Tab one</paper-tab>
+      <paper-tab>Tab two</paper-tab>
+      <paper-tab>Tab three</paper-tab>
+    </paper-tabs>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </section>
+
+  <section>
+    <template id="toastGroup" is="auto-binding">
+      <paper-button raised right on-click="{{showToast}}">
+        Show Toast
+      </paper-button>
+      <paper-toast id="toast" text="Sample toast here."></paper-toast>
+    </template>
+  </section> -->
 </body>
 </html>

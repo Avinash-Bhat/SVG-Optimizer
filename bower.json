@@ -7,5 +7,9 @@
   "author": "Avinash Ananth Narayan R<nashpapa@gmail.com>",
   "private": false,
   "dependencies": {
+    "polymer": "Polymer/polymer#0.5.5"
+    , "paper-elements": "Polymer/paper-elements#0.5.5"
+    , "core-scaffold": "polymer/core-scaffold#0.5.5"
+    , "core-label": "polymer/core-label#0.5.5"
   }
 }
