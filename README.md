@@ -1,6 +1,7 @@
 # SVG Optimizer
 
-Optimize the any SVG 
+Optimize any SVG.
+
 
 ## LICENSE
 
@@ -11,7 +12,7 @@ If not specified otherwise, the code included in this project is licensed under 
 The [logo][logo] is derived from two different icons as specified:
 
 * The base is derived from the [Official svg logo][svg-logo] (licensed under [W3C Document license][w3c-dl] and created by W3C).
-* the cog in the center is modified from the iconset [material-design-icons][mdi] (licensed under [Attribution 4.0 International license][cc-by] and createed by Google)
+* the cog in the center is modified from the iconset [material-design-icons][mdi] (licensed under [Attribution 4.0 International license][cc-by] and created by Google)
 
 The logo may be distributed under either of them without violating either of them.
 
